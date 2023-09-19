@@ -1,0 +1,153 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contact{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-information{
+    height: 60%;
+    width: 30%;
+    background: transparent;
+    border-radius: 30px;
+    border-color: #00abf0;
+    display: grid;
+    justify-items: center;
+}
+
+.contact-information input{
+    margin-top:1.5rem;
+}
+
+.contact-information input{
+    height: 30px;
+    width: 80%;
+    font-size: 130%;
+    border-radius: 24px;
+    padding: 0.4em 0.7em;
+    text-decoration: none;
+    color: #ededed;
+    background: rgba(0,0,0,0.30);
+    font-family: inherit;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    transition: 0.4s ease;
+}
+
+.contact-information textarea{
+    height: 60px;
+    width: 80%;
+    resize: none;
+    font-size: 130%;
+    border-radius: 24px;
+    padding: 0.4em 0.7em;
+    text-decoration: none;
+    color: #ededed;
+    background: rgba(0,0,0,0.30);
+    font-family: inherit;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    transition: 0.4s ease;
+    margin-top: 1em;
+    overflow: hidden;
+}
+
+/* .contact-information{
+    margin: 10rem 35rem;
+} */
+
+::placeholder{
+    color: #ededed;
+}
+
+.contact-information input:hover{
+    background: #7c7c7c6b;
+}
+
+.contact-information textarea:hover{
+    background: #7c7c7c6b;
+}
+
+.contact-information legend{
+    color: #ededed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    margin: 0.4em 0.5em;
+}
+
+.subName{
+    color: #00abf0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    margin-left: 0.4em;
+}
+
+.contact-information button{
+    position: relative;
+    margin: 1em 0.5em;
+    background: #081b29;
+    font-size: 150%;
+    color: #00abf0;
+    font-family: inherit;
+    font-weight: 600;
+    border: 2px solid #00abf0;
+    outline: none;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    transform: transition .5s ease;
+}
+
+.contact-information button:hover{
+    color: #081b29;
+}
+
+.contact-information button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+    transform-origin:right;
+}
+
+.contact-information button:hover::before{
+    width: 100%;
+    transform-origin:right;
+}
+
+.contact::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1.9s ease forwards;
+    animation-delay: .4s;   
+    z-index: 2;
+}
+
+@keyframes showRight{
+    100%{
+      width: 0;
+    }
+  }
